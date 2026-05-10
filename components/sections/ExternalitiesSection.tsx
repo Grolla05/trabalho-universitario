@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Scale, Waves, BarChart3 } from "lucide-react";
 import { LiquidGlassCard } from "../ui/LiquidGlassCard";
+import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,6 +64,7 @@ const marketFailures: MarketFailureCard[] = [
 export function ExternalitiesSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const { isMobile } = useBreakpoint();
 
   return (
     <section ref={sectionRef} className="section" style={{ backgroundColor: 'var(--background-secondary)' }}>
@@ -96,7 +98,8 @@ export function ExternalitiesSection() {
           paddingRight: '2rem',
           msOverflowStyle: 'none',
           scrollbarWidth: 'none',
-          cursor: 'grab'
+          cursor: 'grab',
+          scrollSnapType: isMobile ? 'x mandatory' : 'none'
         }} ref={scrollContainerRef}>
           {marketFailures.map((failure, index) => (
             <motion.div
@@ -104,7 +107,7 @@ export function ExternalitiesSection() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              style={{ minWidth: '350px', overflow: 'visible' }}
+              style={{ minWidth: isMobile ? '280px' : '350px', overflow: 'visible', scrollSnapAlign: isMobile ? 'start' : 'none' }}
             >
               <LiquidGlassCard
                 accentColor={failure.accentColor}
