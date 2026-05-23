@@ -155,24 +155,24 @@ export function SanitationIcebergHero() {
           </motion.div>
 
           {/* Iceberg SVG */}
-          <motion.div 
-            className="sanitation-iceberg-column" 
-            style={{ 
-              y: icebergY, 
+          <motion.div
+            className="sanitation-iceberg-column"
+            style={{
+              y: icebergY,
               opacity: heroOpacity,
-              maxHeight: isMobile ? '300px' : undefined,
               display: 'flex',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              width: '100%',
             }}
           >
             <svg
               ref={icebergRef}
               viewBox="0 0 400 600"
               width="100%"
-              height="100%"
+              height="auto"
               preserveAspectRatio="xMidYMid meet"
               className="sanitation-iceberg-svg"
-              style={{ filter: 'drop-shadow(0 20px 50px rgba(0,0,0,0.2))', maxWidth: isMobile ? '280px' : undefined }}
+              style={{ filter: 'drop-shadow(0 20px 50px rgba(0,0,0,0.2))', maxWidth: isMobile ? '260px' : undefined }}
             >
               <defs>
                 <linearGradient id="icebergGrad" x1="0%" y1="0%" x2="0%" y2="100%">

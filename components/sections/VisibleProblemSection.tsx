@@ -232,8 +232,8 @@ export function VisibleProblemSection() {
                         axisLine={false} tickLine={false}
                       />
                       <YAxis
-                        type="category" dataKey="name" width={96}
-                        tick={{ fill: "rgba(255,255,255,0.7)", fontSize: 12, fontWeight: 600 }}
+                        type="category" dataKey="name" width={isMobile ? 72 : 96}
+                        tick={{ fill: "rgba(255,255,255,0.7)", fontSize: isMobile ? 10 : 12, fontWeight: 600 }}
                         axisLine={false} tickLine={false}
                       />
                       <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(255,255,255,0.04)" }} />
