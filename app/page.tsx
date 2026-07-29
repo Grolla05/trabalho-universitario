@@ -18,7 +18,7 @@ const SanitationIcebergHero = dynamic(
 );
 const LayeredJourneySection = dynamic(
   () => import("@/components/sections/LayeredJourneySection").then(m => ({ default: m.LayeredJourneySection })),
-  { ssr: false, loading: SectionLoader }
+  { loading: SectionLoader }
 );
 const VisibleProblemSection = dynamic(
   () => import("@/components/sections/VisibleProblemSection").then(m => ({ default: m.VisibleProblemSection })),
@@ -26,43 +26,43 @@ const VisibleProblemSection = dynamic(
 );
 const StructuralInequalitySection = dynamic(
   () => import("@/components/sections/StructuralInequalitySection").then(m => ({ default: m.StructuralInequalitySection })),
-  { ssr: false, loading: SectionLoader }
+  { loading: SectionLoader }
 );
 const ExternalitiesSection = dynamic(
   () => import("@/components/sections/ExternalitiesSection").then(m => ({ default: m.ExternalitiesSection })),
-  { ssr: false, loading: SectionLoader }
+  { loading: SectionLoader }
 );
 const NashEquilibriumSection = dynamic(
   () => import("@/components/sections/NashEquilibriumSection").then(m => ({ default: m.NashEquilibriumSection })),
-  { ssr: false, loading: SectionLoader }
+  { loading: SectionLoader }
 );
 const IcebergModelDiveSection = dynamic(
   () => import("@/components/sections/IcebergModelDiveSection").then(m => ({ default: m.IcebergModelDiveSection })),
-  { ssr: false, loading: SectionLoader }
+  { loading: SectionLoader }
 );
 const NewLegalFrameworkSection = dynamic(
   () => import("@/components/sections/NewLegalFrameworkSection").then(m => ({ default: m.NewLegalFrameworkSection })),
-  { ssr: false, loading: SectionLoader }
+  { loading: SectionLoader }
 );
 const StakeholdersGridSection = dynamic(
   () => import("@/components/sections/StakeholdersGridSection").then(m => ({ default: m.StakeholdersGridSection })),
-  { ssr: false, loading: SectionLoader }
+  { loading: SectionLoader }
 );
 const EsgAgendaSection = dynamic(
   () => import("@/components/sections/EsgAgendaSection").then(m => ({ default: m.EsgAgendaSection })),
-  { ssr: false, loading: SectionLoader }
+  { loading: SectionLoader }
 );
 const SystemicLoopsSection = dynamic(
   () => import("@/components/sections/SystemicLoopsSection").then(m => ({ default: m.SystemicLoopsSection })),
-  { ssr: false, loading: SectionLoader }
+  { loading: SectionLoader }
 );
 const ManifestoOutroSection = dynamic(
   () => import("@/components/sections/ManifestoOutroSection").then(m => ({ default: m.ManifestoOutroSection })),
-  { ssr: false, loading: SectionLoader }
+  { loading: SectionLoader }
 );
 const AcademicFooterSection = dynamic(
   () => import("@/components/sections/AcademicFooterSection").then(m => ({ default: m.AcademicFooterSection })),
-  { ssr: false, loading: SectionLoader }
+  { loading: SectionLoader }
 );
 
 export default function Home() {

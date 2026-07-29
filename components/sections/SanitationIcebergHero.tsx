@@ -46,37 +46,6 @@ export function SanitationIcebergHero() {
       0.6
     );
 
-    gsap.to(icebergRef.current, {
-      y: 20,
-      duration: 3,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
-
-    gsap.to(buttonRef.current, {
-      scale: 1.05,
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: "power1.inOut",
-    });
-
-    if (!isMobile) {
-      const connectionLines = document.querySelectorAll(".sanitation-connection-dot");
-      connectionLines.forEach((dot, index) => {
-        gsap.to(dot, {
-          y: Math.random() * 30 - 15,
-          x: Math.random() * 20 - 10,
-          opacity: 0.6,
-          duration: 4 + Math.random() * 2,
-          repeat: -1,
-          yoyo: true,
-          delay: index * 0.3,
-          ease: "sine.inOut",
-        });
-      });
-    }
   }, [isMobile]);
 
   return (
@@ -165,6 +134,7 @@ export function SanitationIcebergHero() {
               width: '100%',
             }}
           >
+            <div style={{ animation: 'iceberg-float 3s ease-in-out infinite', display: 'flex', justifyContent: 'center', width: '100%' }}>
             <svg
               ref={icebergRef}
               viewBox="0 0 400 600"
@@ -230,6 +200,7 @@ export function SanitationIcebergHero() {
                 <text x="200" y="460" textAnchor="middle" fill="var(--foreground)" fontSize="10" fontWeight="700">INCENTIVOS</text>
               </g>
             </svg>
+            </div>
           </motion.div>
 
         </div>
@@ -238,10 +209,10 @@ export function SanitationIcebergHero() {
       {/* Floating data dots — hidden on mobile */}
       {!isMobile && (
         <>
-          <div className="sanitation-connection-dot" style={{ left: "10%", top: "20%", backgroundColor: 'var(--accent)' }} />
-          <div className="sanitation-connection-dot" style={{ left: "15%", top: "40%", backgroundColor: 'var(--accent)' }} />
-          <div className="sanitation-connection-dot" style={{ right: "12%", top: "30%", backgroundColor: 'var(--accent)' }} />
-          <div className="sanitation-connection-dot" style={{ right: "20%", top: "50%", backgroundColor: 'var(--accent)' }} />
+          <div className="sanitation-connection-dot" style={{ left: "10%", top: "20%", backgroundColor: 'var(--accent)', animation: 'dot-drift 4s ease-in-out infinite' }} />
+          <div className="sanitation-connection-dot" style={{ left: "15%", top: "40%", backgroundColor: 'var(--accent)', animation: 'dot-drift 5s ease-in-out infinite', animationDelay: '0.3s' }} />
+          <div className="sanitation-connection-dot" style={{ right: "12%", top: "30%", backgroundColor: 'var(--accent)', animation: 'dot-drift 4.5s ease-in-out infinite', animationDelay: '0.6s' }} />
+          <div className="sanitation-connection-dot" style={{ right: "20%", top: "50%", backgroundColor: 'var(--accent)', animation: 'dot-drift 3.5s ease-in-out infinite', animationDelay: '0.9s' }} />
         </>
       )}
 

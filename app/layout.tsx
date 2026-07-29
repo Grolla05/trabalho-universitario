@@ -1,6 +1,4 @@
 import "./globals.css";
-import "aos/dist/aos.css";
-import "animate.css";
 
 export const metadata = {
   title: "A Crise Invisível do Saneamento no Brasil",

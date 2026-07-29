@@ -58,8 +58,7 @@ export function HeroSection() {
           </p>
 
           <div
-            className="animate__animated animate__bounce animate__infinite animate__slower"
-            style={{ marginTop: isMobile ? '2.5rem' : '5rem', display: 'flex', justifyContent: 'center' }}
+            style={{ marginTop: isMobile ? '2.5rem' : '5rem', display: 'flex', justifyContent: 'center', animation: 'arrow-bounce 1.5s ease-in-out infinite' }}
           >
             <ArrowDown size={isMobile ? 24 : 32} color="#111" />
           </div>
